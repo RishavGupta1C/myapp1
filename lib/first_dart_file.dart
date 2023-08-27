@@ -15,6 +15,7 @@ void main() {
           Colors.blueAccent,
           Color.fromARGB(255, 74, 44, 116),
         ),
+        // body: GradientContainer.rgb(),
       ),
     ),
   );
