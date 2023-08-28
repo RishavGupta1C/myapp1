@@ -4,20 +4,21 @@ import 'package:myapp1/text_style.dart';
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
 
-class GradientContainer extends StatelessWidget {
+class GradientContainer extends StatefulWidget {
   final Color color1;
   final Color color2;
   final Color color3;
+  var activeDiceImage = 'assets/images/dice-1.png';
 
   // required is needed for named arguments
-  const GradientContainer(this.color1, this.color2, this.color3, {Key? key})
+  GradientContainer(this.color1, this.color2, this.color3, {Key? key})
       : super(key: key);
 
   // Alternative Constructor
   // factory GradientContainer.red(Color color1) {
   //   return GradientContainer(color1, Colors.transparent, Colors.transparent)
   // }
-  const GradientContainer.rgb({Key? key})
+  GradientContainer.rgb({Key? key})
       : color1 = Colors.redAccent,
         color2 = Colors.blueAccent,
         color3 = Colors.greenAccent,
@@ -37,7 +38,7 @@ class GradientContainer extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Image.asset("assets/images/dice-1.png", width: 200),
+            Image.asset(activeDiceImage, width: 200),
             // Sized Box is a special widget which has a fixed width and height
             // Unlike others whose size depends on the content inside
             const SizedBox(height: 20),
@@ -55,7 +56,9 @@ class GradientContainer extends StatelessWidget {
     );
   }
 
-  void rollDice() {}
+  void rollDice() {
+    activeDiceImage = 'assets/images/dice-3.png';
+  }
 }
 
 
