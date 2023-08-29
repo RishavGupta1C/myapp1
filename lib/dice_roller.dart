@@ -5,6 +5,7 @@ import 'package:myapp1/text_style.dart';
 final randomizer = Random();
 
 // We can add const canstructor here
+// This is a custom widget
 class DiceRoller extends StatefulWidget {
   const DiceRoller({Key? key}) : super(key: key);
 
